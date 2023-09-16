@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} FristBricks Quiz | Merhaba {% endblock title %}
+{% block content %}
+<div class="container my-4">
+    <div class="jumbotron">
+
+	      <h2 class="text-center text-success">Congratulations!! You have successfully logged in.</h2>
+	      <h3 class="text-center text-info">Before you play the quiz, here are the rules</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body">
+                    <h4 class="card-title">Rules :</h4>
+                    <p class="card-text">
+                        <ul style="list-style:decimal;">
+                            <li>Tüm sorular çoktan seçmelidir.</li>
+                            <li><span class="text-danger">Sadece bir şık doğrudur./span></li>
+                            <li>Tüm soruların eşit puanı vardır. <span class="text-danger">Her soru 4 puan değerindedir.</span>
+                            </li>
+                            <li>Her soru yanlızca bir kere görüntülenebilir.</li>
+                            <li>Süre sınırlaması yoktur.</li>
+                            <!-- <li>Sayfayı yeniler veya bir sonraki soruya geçerseniz</li>
+                            <li>Questions are displayed randomly for every user.</li> -->
+                            <li>Cevabınızın doğru veya yanlış olduğunu hemen görebileceksiniz.</li>
+                        </ul>
+                    </p>
+                    <a href="{% url 'play' %}" class="btn btn-success my-2 ml-4">Quize Başla</a>
+                </div>
+                <div class="card-footer text-danger">Rules last modified 2023</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

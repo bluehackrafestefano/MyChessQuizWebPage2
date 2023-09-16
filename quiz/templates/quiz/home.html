@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} FirstBricks Quiz | Home {% endblock title %}
+{% block content %}
+
+    <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+      <div class="container text-center">
+        <h1 class="display-1 text-primary">First Bricks</h1>
+        <p class="display-4 d-none d-sm-block">Satranç bilgini ölçmeye hazır mısın?</p>
+        <p class="lead">Satranç Quizi</p>
+
+        {% if not request.user.is_active %}
+
+        <p class="lead">Satranç quizine katılmak için kayıt olmalısın.</p>
+        
+        <a href="{% url 'register' %}" class="btn btn-lg btn-warning mt-1"><i class="fa fa-user-plus" aria-hidden="true"></i> Kayıt Ol</a>
+
+        {% else %}
+        <a href="{% url 'user_home' %}" class="btn btn-lg btn-info mt-1">Quize Katıl</a>
+        {% endif %}
+      </div>
+    </section>
+
+{% endblock content %}
